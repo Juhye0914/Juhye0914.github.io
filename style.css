@@ -1,0 +1,196 @@
+/* ----- 기본 스타일 초기화 ----- */
+body, ul, h1, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* 1. BODY에 그라데이션 배경 적용 */
+body {
+    background: linear-gradient(0deg, #B6B7FF 0%, #9799FF 22.01%, #6265FE 71.93%, #4C4FFF 97.46%);
+    background-attachment: fixed; /* 스크롤해도 배경은 고정 */
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ----- 2. 맨 상단 전체 영역 (`<header>`) ----- */
+.main-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    
+    padding: 20px 30px;
+    box-sizing: border-box;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* ----- 3. 상단 바 (`<nav>`) ----- */
+.main-nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+}
+
+/* 로고 기본 스타일 */
+.nav-logo img {
+    width: 70px;
+    height: 29px;
+    display: block;
+}
+
+/* ----- 4. 네비게이션 메뉴 (`<ul>`) ----- */
+.nav-menu {
+    display: flex;
+    padding: 14px 24px;
+    align-items: center;
+    gap: 27px;
+    margin-left: auto;
+
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.40);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+/* ----- 5. 네비게이션 텍스트 (`<a>`) ----- */
+.nav-menu a {
+    color: #121212;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 140%;
+    letter-spacing: -0.35px;
+}
+
+/* ----- 6. APP STORE 버튼 (`<a>`) ----- */
+.app-store-button {
+    display: flex;
+    padding: 13px 17px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 1000px;
+    background: #6265FE;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+/* ----- 7. 메인 히어로 섹션 ----- */
+.hero-section {
+    height: 611px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+/* ----- 8. 히어로 섹션 내부 콘텐츠 컨테이너 ----- */
+.hero-content {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----- 9. 히어로 이미지 스타일 ----- */
+.hero-content img {
+    position: absolute;
+    flex-shrink: 0;
+}
+
+.hero-first {
+    width: 352px;
+    height: 135px;
+    top: 66px;
+    left: 70px;
+    z-index: 2;
+    opacity: 0; /* 애니메이션 시작 전 투명하게 */
+    animation: fadeInUp1 1s ease-out 0.2s forwards;
+}
+
+.hero-smartphone {
+    width: 734.384px;
+    height: 456.5px;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%); /* 중앙 정렬 */
+    z-index: 1;
+    opacity: 0; /* 애니메이션 시작 전 투명하게 */
+    /* 👇 스마트폰에도 '떠오르는' 애니메이션으로 수정 */
+    animation: fadeInUp2 1s ease-out 0.5s forwards;
+}
+
+.hero-second {
+    width: 464px;
+    height: 120px;
+    bottom: 35.5px;
+    right: 70px;
+    z-index: 2;
+    opacity: 0; /* 애니메이션 시작 전 투명하게 */
+    animation: fadeInUp1 1s ease-out 0.8s forwards;
+}
+
+.hero-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+/* ----- 스크롤 테스트를 위한 임시 영역 ----- */
+.scroll-test {
+    height: 1500px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* ----- 추가된 애니메이션 효과 ----- */
+/* 👇 모든 이미지에 적용될 '떠오르는' 애니메이션 정의 */
+@keyframes fadeInUp1 {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
