@@ -10,16 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <!-- CSS 파일 연결 -->
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
+    <div class="pointer"></div>
     <header class="main-header">
         <nav class="main-nav">
             <div class="nav-logo">
                 <a href="#"><img src="./img/logo.png" alt="f!lln 로고"></a>
             </div>
             <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
                 <li><a href="#">Functions</a></li>
-                <li><a href="#">How to</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
             <div class="nav-app-store">
@@ -29,20 +32,22 @@
     </header>
 
     <main>
-        <img src="./img/image 526.png" alt="line" class="hero-line">
         <section class="hero-section">
             <div class="hero-content">
+                <img src="./img/image 526.png" alt="line" class="hero-line">
                 <img src="./img/first-f!lln.png" alt="f!lln" class="hero-first">
                 <img src="./img/smartphone.png" alt="smart-phone" class="hero-smartphone">
                 <img src="./img/second-feel!n.png" alt="feel!n" class="hero-second">
             </div>
         </section>
 
-        <!-- 👇 스크롤 테스트를 위한 임시 콘텐츠 -->
-        <div class="scroll-test">
-            <h2>스크롤 테스트 영역</h2>
-            <p>이 페이지를 아래로 스크롤하면 상단 헤더가 화면 위에 고정되는 것을 확인할 수 있습니다.</p>
-        </div>
+        <section class="about-section">
+            <h2 class="section-title">ABOUT</h2>
+            <p class="section-description">
+                F!lln® 은 경제선 지능 청년이 권리의 공백을 메우고,<br>
+                사회적 연결을 통해 주체성을 확장해 가는 여정을 담은 브랜딩 프로젝트 입니다.
+            </p>
+        </section>
     </main>
 
 </body>

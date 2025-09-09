@@ -43,7 +43,7 @@ ul {
     width: 100%;
     align-items: center;
     position: relative;
-    gap: 20px;
+    gap: 26px;
 }
 
 /* 로고 기본 스타일 */
@@ -56,25 +56,44 @@ ul {
 /* ----- 4. 네비게이션 메뉴 (`<ul>`) ----- */
 .nav-menu {
     display: flex;
-    padding: 14px 24px;
+    padding: 14px 25px;
     align-items: center;
-    gap: 27px;
+    gap: 37px;
     margin-left: auto;
 
     border-radius: 100px;
-    background: rgba(255, 255, 255, 0.40);
+    background: rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
 }
 
 /* ----- 5. 네비게이션 텍스트 (`<a>`) ----- */
 .nav-menu a {
-    color: #121212;
+    color: #9D9D9D;
     text-align: center;
     font-size: 14px;
     font-weight: 700;
     line-height: 140%;
     letter-spacing: -0.35px;
+    /* 👇 후광 효과도 부드럽게 전환되도록 text-shadow 추가 */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* 메뉴 항목에 마우스를 올렸을 때(hover) - 기존과 동일 */
+.nav-menu a:hover {
+    color: #FFFFFF;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+}
+
+/* 👇 'HOME'처럼 활성화된 메뉴 항목 스타일 (후광 없음) */
+.nav-menu li.active a {
+    color: #FFFFFF;
+    text-shadow: none; /* 후광 효과 제거 */
+}
+
+/* 활성화된 항목에 마우스를 올려도 후광이 생기지 않도록 보장 */
+.nav-menu li.active a:hover {
+    text-shadow: none;
 }
 
 /* ----- 6. APP STORE 버튼 (`<a>`) ----- */
@@ -160,10 +179,12 @@ ul {
 .hero-line {
     position: absolute;
     bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
     z-index: 0;
+
+    /* 👇 아래 3줄로 수정 또는 추가 */
+    width: 100vw; /* 1. 너비를 뷰포트(화면) 너비와 동일하게 설정 */
+    left: 50%;    /* 2. 부모 요소의 중앙으로 이동 */
+    transform: translateX(-50%); /* 3. 자신의 너비 절반만큼 왼쪽으로 이동해 완벽 중앙 정렬 */
 }
 
 /* ----- 스크롤 테스트를 위한 임시 영역 ----- */
@@ -193,4 +214,42 @@ ul {
   to {
     opacity: 1;
   }
+}
+
+/* style.css 파일의 .pointer 부분을 아래 코드로 교체 */
+
+.pointer {
+    position: fixed; 
+    width: 15px;  /* 원 모양에 맞게 크기 조정 */
+    height: 15px; /* 원 모양에 맞게 크기 조정 */
+    border-radius: 50%; /* 원으로 만들기 위해 50%로 변경 */
+    background: rgb(0, 0, 0, 45%); 
+    transition: transform 0.3s ease-out;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -50%); /* 중심 정렬 유지 */
+    /* clip-path 속성은 삭제합니다. */
+}
+
+/* ----- 10. About 섹션 ----- */
+.about-section {
+    width: 100%;
+    padding: 150px 0; /* 위아래로 충분한 여백 추가 */
+    background-color: #C1C2FF; /* 이미지와 유사한 배경색 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    color: #4347B1; /* 텍스트 색상 */
+    box-sizing: border-box; /* 패딩이 너비에 영향을 주지 않도록 설정 */
+}
+
+.section-title {
+    font-size: 36px; /* 제목 폰트 크기 */
+    font-weight: 700; /* 폰트 두께 */
+    margin-bottom: 25px; /* 제목과 설명 사이의 간격 */
+}
+
+.section-description {
+    font-size: 16px; /* 설명 폰트 크기 */
+    line-height: 1.7; /* 줄 간격 */
+    font-weight: 500;
 }
