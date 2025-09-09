@@ -1,16 +1,10 @@
 /* ----- 기본 스타일 초기화 ----- */
-body, ul, h1, p {
+body {
+    background-color: #f0f0f0; /* 예시: 연한 회색 */
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
-
-/* 1. BODY에 그라데이션 배경 적용 */
-body {
-    background: linear-gradient(0deg, #B6B7FF 0%, #9799FF 22.01%, #6265FE 71.93%, #4C4FFF 97.46%);
-    background-attachment: fixed; /* 스크롤해도 배경은 고정 */
-}
-
 
 a {
     text-decoration: none;
@@ -19,6 +13,12 @@ a {
 
 ul {
     list-style: none;
+}
+
+/* 👇 새로운 wrapper에 그라데이션을 적용하는 스타일 추가 */
+.hero-background-wrapper {
+    background: linear-gradient(0deg, #B6B7FF 0%, #9799FF 22.01%, #6265FE 71.93%, #4C4FFF 97.46%);
+    /* 스크롤해도 배경이 고정되지 않으므로 background-attachment는 제거합니다. */
 }
 
 /* ----- 2. 맨 상단 전체 영역 (`<header>`) ----- */
