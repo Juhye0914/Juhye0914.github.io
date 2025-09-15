@@ -1,9 +1,13 @@
 /* ----- 기본 스타일 초기화 ----- */
+html {
+    /* 부드러운 스크롤 효과를 위해 추가 */
+    scroll-behavior: smooth;
+}
 body {
-    background-color: #f0f0f0; /* 예시: 연한 회색 */
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', "Spoqa Han Sans Neo", sans-serif;
 }
 
 a {
@@ -19,6 +23,9 @@ ul {
 .hero-background-wrapper {
     background: linear-gradient(0deg, #B6B7FF 0%, #9799FF 22.01%, #6265FE 71.93%, #4C4FFF 97.46%);
     /* 스크롤해도 배경이 고정되지 않으므로 background-attachment는 제거합니다. */
+    overflow-x: hidden;
+    /* 👇 헤더가 고정되면서 차지하는 공간만큼 안쪽 여백을 추가합니다. (헤더 높이만큼) */
+    padding-top: 93px;
 }
 
 /* ----- 2. 맨 상단 전체 영역 (`<header>`) ----- */
@@ -32,8 +39,10 @@ ul {
     padding: 20px 30px;
     box-sizing: border-box;
 
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 100;
 }
 
@@ -99,28 +108,33 @@ ul {
 /* ----- 6. APP STORE 버튼 (`<a>`) ----- */
 .app-store-button {
     display: flex;
-    padding: 13px 17px;
-    justify-content: center;
-    align-items: center;
-    gap: 4px;
+    padding: 14px 30px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 11px;
     border-radius: 1000px;
     background: #6265FE;
+
     color: #FFF;
     text-align: center;
+    font-family: 'Montserrat';
     font-size: 14px;
-    font-weight: 400;
-    line-height: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px; /* 166.667% */
 }
 
 /* ----- 7. 메인 히어로 섹션 ----- */
 .hero-section {
+    display: flex;
     height: 611px;
+    max-width: 1240px;
     margin: 0 auto;
     box-sizing: border-box;
     
-    display: flex;
-    justify-content: center;
+    flex-shrink: 0;
     align-items: center;
+    align-self: stretch;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
@@ -147,7 +161,7 @@ ul {
     width: 352px;
     height: 135px;
     top: 66px;
-    left: 70px;
+    left: 0px;
     z-index: 2;
     opacity: 0; /* 애니메이션 시작 전 투명하게 */
     animation: fadeInUp1 1s ease-out 0.2s forwards;
@@ -170,7 +184,7 @@ ul {
     width: 464px;
     height: 120px;
     bottom: 35.5px;
-    right: 70px;
+    right: 0;
     z-index: 2;
     opacity: 0; /* 애니메이션 시작 전 투명하게 */
     animation: fadeInUp1 1s ease-out 0.8s forwards;
@@ -234,22 +248,65 @@ ul {
 
 /* ----- 10. About 섹션 ----- */
 .about-section {
+    height: 800px;
     width: 100%;
-    padding: 150px 0; /* 위아래로 충분한 여백 추가 */
-    background-color: #C1C2FF; /* 이미지와 유사한 배경색 */
+    padding-top: 108.5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #F9F9F9; /* 이미지와 유사한 배경색 */
     text-align: center; /* 텍스트 중앙 정렬 */
-    color: #4347B1; /* 텍스트 색상 */
+    color: #4F52F8; /* 텍스트 색상 */
     box-sizing: border-box; /* 패딩이 너비에 영향을 주지 않도록 설정 */
 }
 
 .section-title {
-    font-size: 36px; /* 제목 폰트 크기 */
-    font-weight: 700; /* 폰트 두께 */
-    margin-bottom: 25px; /* 제목과 설명 사이의 간격 */
+    color: #4F52F8;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; /* 영어 폰트 설정 */
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 31px;
+    padding-bottom: 35px;
+    padding-top: 40.5px;
 }
 
-.section-description {
-    font-size: 16px; /* 설명 폰트 크기 */
-    line-height: 1.7; /* 줄 간격 */
+.section-description1 {
+    font-family: "Spoqa Han Sans Neo", sans-serif; /* 한국어 폰트 설정 */
+    font-size: 20px; /* 설명 폰트 크기 */
+    line-height: 28px; /* 줄 간격 */
+    font-weight: 400;
+    color: #121212;
+    letter-spacing: -0.8px;
+    font-style: normal;
+    margin-bottom: 40.5px;
+}
+
+/* 👇 span으로 감싼 영어 텍스트에만 Montserrat 폰트를 적용합니다. */
+.section-description1 .en-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 140% */
+}
+
+.section-description2{
+    color: #212124;
+    font-family: "Spoqa Han Sans Neo", sans-serif;
+    font-size: 20px;
+    font-style: normal;
     font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -0.8px;
+    bottom: 45.5px;
+}
+
+.section-description2 .highlight{
+    color: #6265FE;
+    font-family: "Spoqa Han Sans Neo", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -0.8px;
 }

@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css" rel="stylesheet" type="text/css">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,12 +23,13 @@
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <!-- 👇 About 메뉴의 href를 #about으로 변경 -->
+                    <li><a href="#about">About</a></li>
                     <li><a href="#">Functions</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>
                 <div class="nav-app-store">
-                    <a href="#" class="app-store-button">APP STORE</a>
+                    <a href="#" class="app-store-button">F!lln APP</a>
                 </div>
             </nav>
         </header>
@@ -40,11 +44,18 @@
                 </div>
             </section>
         </main>
-    </div> <section class="about-section">
+    </div>
+    
+    <!-- 👇 section에 id="about" 추가 -->
+    <section class="about-section" id="about">
         <h2 class="section-title">ABOUT</h2>
-        <p class="section-description">
-            F!lln® 은 경제선 지능 청년이 권리의 공백을 메우고,<br>
+        <p class="section-description1">
+            <span class="en-text">F!lln®</span>은 경계선 지능 청년이 권리의 공백을 메우고, <br>
             사회적 연결을 통해 주체성을 확장해 가는 여정을 담은 브랜딩 프로젝트 입니다.
+        </p>
+        <p class="section-description2">
+            <span class="highlight">경계선 지능 청년</span>이 쉽게 <span class="highlight">권리를 인식·실행</span>하며, <span class="highlight">경험</span>을 
+            <span class="highlight">제도 개선</span>으로 <span class="highlight">연결</span>하도록 돕습니다.
         </p>
     </section>
     
