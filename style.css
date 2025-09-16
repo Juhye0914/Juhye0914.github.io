@@ -284,9 +284,9 @@ ul {
 
 
 #scroll-video {
-    width: 1240px;
-    height: 391.5px;
-    aspect-ratio: 1240.00/391.50;
+    width: 920px;
+    height: 419px;
+    aspect-ratio: 920/419;
     position: sticky;
 }
 
@@ -308,4 +308,31 @@ ul {
     font-weight: 500;
     line-height: 28px;
     letter-spacing: -0.8px;
+}
+
+/* ----- 11. Interview 섹션 ----- */
+.Interview-section {
+    height: 800px;
+    width: 100%;
+    padding-top: 103px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #F9F9F9; /* 이미지와 유사한 배경색 */
+    box-sizing: border-box; /* 패딩이 너비에 영향을 주지 않도록 설정 */
+}
+
+.content-wrapper {
+    max-width: 920px; /* 영상의 너비와 동일하게 설정 */
+    margin: 0 auto;   /* 중앙 정렬 */
+    text-align: left; /* 내부 텍스트 기본 왼쪽 정렬 */
+}
+
+.interview-title{
+    color: var(--text-black, #121212);
+    text-align: left;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 31px;
 }

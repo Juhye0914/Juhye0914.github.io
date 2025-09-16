@@ -38,7 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                setActiveLink(entry.target.id);
+                let currentId = entry.target.id;
+                if (currentId === 'Interview') {
+                    currentId = 'about';
+                }
+                setActiveLink(currentId);
             }
         });
     }, observerOptions);
