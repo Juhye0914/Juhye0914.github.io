@@ -71,7 +71,7 @@ ul {
     margin-left: auto;
 
     border-radius: 100px;
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(0, 0, 0, 0.50);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
 }
@@ -113,7 +113,7 @@ ul {
     align-items: flex-start;
     gap: 11px;
     border-radius: 1000px;
-    background: #6265FE;
+    background: #121212;
 
     color: #FFF;
     text-align: center;
@@ -250,7 +250,7 @@ ul {
 .about-section {
     height: 800px;
     width: 100%;
-    padding-top: 108.5px;
+    padding-top: 103px;
     padding-left: 20px;
     padding-right: 20px;
     background-color: #F9F9F9; /* 이미지와 유사한 배경색 */
@@ -267,8 +267,8 @@ ul {
     font-style: normal;
     font-weight: 700;
     line-height: 31px;
-    padding-bottom: 35px;
-    padding-top: 40.5px;
+    padding-bottom: 15px;
+    padding-top: 20px;
 }
 
 .section-description1 {
@@ -282,13 +282,12 @@ ul {
     margin-bottom: 40.5px;
 }
 
-/* 👇 span으로 감싼 영어 텍스트에만 Montserrat 폰트를 적용합니다. */
-.section-description1 .en-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px; /* 140% */
+
+#scroll-video {
+    width: 1240px;
+    height: 391.5px;
+    aspect-ratio: 1240.00/391.50;
+    position: sticky;
 }
 
 .section-description2{
