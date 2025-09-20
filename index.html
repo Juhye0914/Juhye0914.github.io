@@ -1,67 +1,90 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>f!lln</title>
+    <title>f!lln - 경계선 지능 청년의 주체적 삶을 위한 브랜드</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css" rel="stylesheet" type="text/css">
+
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+
+    <script src="script.js" defer></script>
 </head>
+
 <body>
     <div class="pointer"></div>
 
-    <div class="hero-background-wrapper" id="home">
-        <header class="main-header">
-            <nav class="main-nav">
-                <div class="nav-logo">
-                    <a href="#"><img src="./img/logo.png" alt="f!lln 로고"></a>
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#">Functions</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-                <div class="nav-app-store">
-                    <a href="#" class="app-store-button">F!lln APP</a>
-                </div>
-            </nav>
-        </header>
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="nav-logo">
+                <h1>
+                    <a href="#home"><img src="./img/logo.png" alt="f!lln 홈으로 이동"></a>
+                </h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#functions">Functions</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <div class="nav-app-store">
+                <a href="#" class="app-store-button">F!lln APP</a>
+            </div>
+        </nav>
+    </header>
 
-        <main>
-            <section class="hero-section">
-                <div class="hero-content">
-                    <img src="./img/image 526.png" alt="line" class="hero-line">
-                    <img src="./img/first-f!lln.png" alt="f!lln" class="hero-first">
-                    <img src="./img/smartphone.png" alt="smart-phone" class="hero-smartphone">
-                    <img src="./img/second-feel!n.png" alt="feel!n" class="hero-second">
-                </div>
-            </section>
-        </main>
-    </div>
+    <main>
+        <section id="home" class="hero-background-wrapper">
+            <div class="hero-content">
+                <img src="./img/image 526.png" alt="" class="hero-line"> <img src="./img/first-f!lln.png"
+                    alt="Fill your blank, f!lln" class="hero-first">
+                <img src="./img/smartphone.png" alt="f!lln 앱이 실행중인 스마트폰 화면" class="hero-smartphone">
+                <img src="./img/second-feel!n.png" alt="Feel your own, feel!n" class="hero-second">
+            </div>
+        </section>
 
-    <section class="about-section" id="about">
-        <h2 class="section-title">ABOUT</h2>
-        <p class="section-description1">
-            <span class="en-text">F!lln®</span> 은 경계선 지능 청년이 권리의 공백을 메우고, <br>
-            사회적 연결을 통해 주체성을 확장해 가는 여정을 담은 브랜딩 프로젝트 입니다.
-        </p>
-        <div class="video-scroll-container">
-            <video id="scroll-video" src="./video/about-video.mp4" muted playsinline preload="auto" autoplay loop></video>
-        </div>
-    </section>
-    <section class="Interview-section" id="Interview">
-        <div class="content-wrapper">
-            <h2 class="interview-title">Interview</h2>
-            <p class="interview-description">
-                <span class="en-text">F!lln®</span> 은 실제 경계선  지능 청년분들의 실제 목소리를 담았습니다.<br>
-                그들이 실제 겪는 어려움을 가까이에서 듣고, 해결하기 위해 다양한 방안을 고려해 진행된 프로젝트입니다.
-            </p>
-        </div>
-    </section>  
+        <section id="about" class="about-section">
+            <div class="about-content">
+                <p class="section-title">ABOUT</p>
+                <p class="section-description1">
+                    <span class="en-text">F!lln®</span> 은 경계선 지능 청년이 권리의 공백을 메우고, <br>
+                    사회적 연결을 통해 주체성을 확장해 가는 여정을 담은 브랜딩 프로젝트 입니다.
+                </p>
+            </div>
+            <div class="video-scroll-container">
+                <video id="scroll-video" src="./video/about-video.mp4" muted playsinline preload="auto" autoplay loop
+                    title="f!lln 브랜드 소개 영상"></video>
+            </div>
+        </section>
+
+        <section id="interview" class="interview-section">
+            <div class="content-wrapper">
+                <h2 class="interview-title">Interview</h2>
+                <p class="interview-description">
+                    <span class="en-text">F!lln®</span> 은 실제 경계선 지능 청년분들의 실제 목소리를 담았습니다.<br>
+                    그들이 실제 겪는 어려움을 가까이에서 듣고, 해결하기 위해 다양한 방안을 고려해 진행된 프로젝트입니다.
+                </p>
+            </div>
+        </section>
+
+        <section id="functions" style="height: 500px; background-color: #e0e0e0; padding: 100px 20px;">
+            <h2>Functions</h2>
+            <p>이곳에 Functions 관련 콘텐츠가 들어갑니다.</p>
+        </section>
+        <section id="contact" style="height: 500px; background-color: #d1d1d1; padding: 100px 20px;">
+            <h2>Contact Us</h2>
+            <p>이곳에 Contact Us 관련 콘텐츠가 들어갑니다.</p>
+        </section>
+    </main>
+
+    <footer style="padding: 40px; text-align: center; background-color: #333; color: white;">
+        <p>&copy; 2025 f!lln. All Rights Reserved.</p>
+    </footer>
+
 </body>
+
 </html>
