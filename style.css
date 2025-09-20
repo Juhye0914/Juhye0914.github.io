@@ -272,6 +272,7 @@ ul {
 .section-description1 {
     margin: 0px;
     color: var(--text-black, #121212);
+    text-align: center;
 
     font-family: "Spoqa Han Sans Neo";
     font-size: 20px;
