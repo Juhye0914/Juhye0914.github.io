@@ -416,23 +416,23 @@ ul {
 
 .Character-image {
     position: absolute;
-    top: 355px;
-    left: 30px;
-    width: 636px;
-    height: 521.5px;
+    top: 385.64px;
+    left: 153px;
+    width: 521px;
+    height: 473.536px;
     flex-shrink: 0;
-    aspect-ratio: 636.00/521.50;
+    aspect-ratio: 521.00/473.54;
     z-index: 2;
 }
 
 .Character-bigstar {
     position: absolute;
-    top: 94px;
-    left: 41px;
-    width: 625px;
-    height: 648.5px;
+    top: 152px;
+    left: 46px;
+    width: 577px;
+    height: 598px;
     flex-shrink: 0;
-    aspect-ratio: 625.00/648.50;
+    aspect-ratio: 577/598;
     z-index: 1;
 }
 
@@ -466,7 +466,7 @@ ul {
     align-items: flex-start;
     position: absolute;
     top: 713px;
-    right: 215px;
+    right: 200px;
     gap: 15px;
 
     color: var(--text-black, #121212);
