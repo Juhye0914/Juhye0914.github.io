@@ -269,7 +269,7 @@ ul {
     /* 77.5% */
 }
 
-.section-description1 {
+.about-description {
     margin: 0px;
     color: var(--text-black, #121212);
     text-align: center;
@@ -294,128 +294,196 @@ ul {
     line-height: 28px;
     /* 140% */
 }
+
 #scroll-video {
     width: 1083px;
     height: 492px;
     flex-shrink: 0;
 }
 
-.interview-section{
+.interview-section {
     display: flex;
     height: 982px;
     width: 100%;
-    /* ◀ 고정 너비 대신 100%로 변경하여 반응형 대응 */
 
     padding-top: 188px;
-    padding-bottom: 125px;
-
+    padding-left: 125px;
+    padding-right: 125px;
+    padding-bottom: 135px;
 
     box-sizing: border-box;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 60px;
     flex-shrink: 0;
 }
 
-.content-wrapper {
+.interview-wrapper {
     display: flex;
     width: 784px;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
     align-items: flex-start;
-}
-
-.interview-title{
-    color: var(--text-black, #121212);
-text-align: left;
-font-family: "Montserrat";
-font-size: 32px;
-font-style: normal;
-font-weight: 700;
-line-height: 31px; /* 96.875% */
-margin: 0px;
-}
-
-.interview-description2{
-    color: var(--text-black, #121212);
-
-/* MO/B/KR/18_Reguar */
-font-family: "Spoqa Han Sans Neo";
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-line-height: 28px;
-letter-spacing: -0.8px;
-margin: 0px;
-}
-/*
-.section-description2 {
-    color: #212124;
-    font-family: "Spoqa Han Sans Neo", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 28px;
-    letter-spacing: -0.8px;
-    bottom: 45.5px;
-}
-
-.section-description2 .highlight {
-    color: #6265FE;
-    font-family: "Spoqa Han Sans Neo", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 28px;
-    letter-spacing: -0.8px;
-}
-
-/* ----- 11. Interview 섹션 ----- */
-/*
-.Interview-section {
-    height: 800px;
-    width: 100%;
-    padding-top: 103px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: #F9F9F9;
-    /* 이미지와 유사한 배경색 */
-/*
-    box-sizing: border-box;
-    /* 패딩이 너비에 영향을 주지 않도록 설정 */
-/*
-}
-
-.content-wrapper {
-    max-width: 920px;
-    /* 영상의 너비와 동일하게 설정 */
-/*
-    margin: 0 auto;
-    /* 중앙 정렬 */
-/*
-    text-align: left;
-    /* 내부 텍스트 기본 왼쪽 정렬 */
-/*
+    gap: 20px;
 }
 
 .interview-title {
     color: var(--text-black, #121212);
     text-align: left;
-    font-family: Montserrat;
+    font-family: "Montserrat";
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
     line-height: 31px;
+    /* 96.875% */
+    margin: 0px;
 }
 
 .interview-description {
     color: var(--text-black, #121212);
-    font-family: "Spoqa Han Sans Neo", sans-serif;
-    font-size: 20px;
+
+    /* MO/B/KR/18_Reguar */
+    font-family: "Spoqa Han Sans Neo";
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 28px;
     letter-spacing: -0.8px;
-    margin-top: 15px;
-    margin-bottom: 40.5px;
-}*/
+    margin: 0px;
+}
+
+.Character-section {
+    display: flex;
+    position: relative;
+    height: 982px;
+    width: 100%;
+
+    box-sizing: border-box;
+    background: var(--shfkdrm, linear-gradient(0deg, var(--Color-Sub_sub_light, #FFF6C3) 0%, var(--Color-Sub-color, #FFEC83) 97.46%));
+}
+
+.Character-wrapper {
+    position: absolute;
+    top: 188px;
+    right: 215px;
+
+    display: flex;
+    width: 784px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.Character-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    color: var(--text-black, #121212);
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 31px;
+    /* 96.875% */
+}
+
+.Character-title {
+    margin: 0px;
+}
+
+.Character-header img {
+    width: 90px;
+    height: 34px;
+    aspect-ratio: 45/17;
+}
+
+.Character-description {
+    margin: 0px;
+    text-align: right;
+    color: var(--text-black, #121212);
+    text-align: right;
+
+    /* MO/B/KR/18_Reguar */
+    font-family: "Spoqa Han Sans Neo";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* 155.556% */
+    letter-spacing: -0.8px;
+}
+
+.Character-image {
+    position: absolute;
+    top: 355px;
+    left: 30px;
+    width: 636px;
+    height: 521.5px;
+    flex-shrink: 0;
+    aspect-ratio: 636.00/521.50;
+    z-index: 2;
+}
+
+.Character-bigstar {
+    position: absolute;
+    top: 94px;
+    left: 41px;
+    width: 625px;
+    height: 648.5px;
+    flex-shrink: 0;
+    aspect-ratio: 625.00/648.50;
+    z-index: 1;
+}
+
+.Megi-Basic-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 490px;
+    right: 215px;
+    gap: 15px;
+
+    color: var(--text-black, #121212);
+    z-index: 2;
+}
+
+.Megi {
+    margin: 0px;
+    /* MO/B/ENG/20_M */
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    /* 140% */
+}
+
+.Megi-Sticker-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 713px;
+    right: 215px;
+    gap: 15px;
+
+    color: var(--text-black, #121212);
+}
+
+.Megi-Sticker-bg {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.Character-smallstar {
+    position: absolute;
+    bottom: 54.5px;
+    right: 107px;
+    width: 445px;
+    height: 461.5px;
+    flex-shrink: 0;
+    aspect-ratio: 445.00/461.50;
+}
