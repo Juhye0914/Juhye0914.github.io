@@ -307,8 +307,8 @@ ul {
     width: 100%;
 
     padding-top: 188px;
-    padding-left: 125px;
-    padding-right: 125px;
+    padding-left: 215px;
+    padding-right: 215px;
     padding-bottom: 135px;
 
     box-sizing: border-box;
@@ -486,4 +486,5 @@ ul {
     height: 461.5px;
     flex-shrink: 0;
     aspect-ratio: 445.00/461.50;
+    z-index: 1;
 }

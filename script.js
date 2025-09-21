@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ----- 2. 네비게이션 메뉴 제어 코드 -----
     const navLinks = document.querySelectorAll('.nav-menu a');
-    // 👇 감지할 대상을 section[id]에서 [id]로 변경하여 div도 포함시킵니다.
     const sections = document.querySelectorAll('div[id], section[id]');
 
     const setActiveLink = (id) => {
@@ -32,19 +31,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const observerOptions = {
         root: null,
         rootMargin: '0px',
+        // 활성화 기준을 다시 50%로 설정합니다. 로직이 개선되어 더 안정적입니다.
         threshold: 0.5
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                let currentId = entry.target.id;
-                if (currentId === 'Interview') {
-                    currentId = 'about';
-                }
-                setActiveLink(currentId);
+        // --- ▼ 수정된 로직 ---
+        // 1. 현재 화면에 보이는 섹션들만 필터링합니다.
+        const intersectingEntries = entries.filter(entry => entry.isIntersecting);
+
+        // 2. 화면에 보이는 섹션이 하나라도 있을 경우에만 활성화 로직을 실행합니다.
+        if (intersectingEntries.length > 0) {
+            // 3. 보이는 섹션들 중 가장 마지막(최신) 섹션을 선택합니다.
+            const latestEntry = intersectingEntries[intersectingEntries.length - 1];
+            
+            let currentId = latestEntry.target.id;
+            
+            if (currentId === 'interview' || currentId === 'Character') {
+                currentId = 'about';
             }
-        });
+
+            setActiveLink(currentId);
+        }
+        // --- ▲ 수정된 로직 ---
+
     }, observerOptions);
 
     if (sections.length > 0) {
