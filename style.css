@@ -566,10 +566,10 @@ ul {
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     opacity: 0;
-    
+
     transform: translateY(30px);
     transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .feature1.animate,
@@ -625,5 +625,52 @@ ul {
     line-height: 28px;
     margin: 0px;
     /* 140% */
+    letter-spacing: -0.8px;
+}
+
+.App-section {
+    display: flex;
+    position: relative;
+    height: 982px;
+    width: 100%;
+
+    flex-shrink: 0;
+    background: var(--Color, #F9F9F9);
+
+}
+
+.App-wrapper {
+    position: absolute;
+    top: 188px;
+    left: 215px;
+    display: flex;
+    width: 784px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.App-title {
+    color: var(--text-black, #121212);
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 31px;
+    margin: 0px;
+    /* 96.875% */
+}
+
+.App-description {
+    margin: 0px;
+    color: var(--text-black, #121212);
+
+    /* MO/B/KR/18_Reguar */
+    font-family: "Spoqa Han Sans Neo";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
     letter-spacing: -0.8px;
 }
