@@ -77,4 +77,33 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // ----- 5. Functions 섹션 feature 애니메이션 -----
+    const functionsSection = document.querySelector('#functions');
+    const features = document.querySelectorAll('.feature1, .feature2, .feature3, .feature4');
+
+    if (functionsSection && features.length > 0) {
+        const featureObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // 섹션에 들어올 때 애니메이션 클래스 추가
+                    features.forEach(feature => {
+                        feature.classList.add('animate');
+                    });
+                } else {
+                    // 섹션을 벗어날 때 애니메이션 클래스 제거
+                    features.forEach(feature => {
+                        feature.classList.remove('animate');
+                    });
+                }
+            });
+        }, {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.3
+        });
+
+        featureObserver.observe(functionsSection);
+    }
+
 });

@@ -488,3 +488,142 @@ ul {
     aspect-ratio: 445.00/461.50;
     z-index: 1;
 }
+
+.Functions-section {
+    display: flex;
+    position: relative;
+    height: 982px;
+    width: 100%;
+    padding: 188px 30px 157.981px 30px;
+
+
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    flex-shrink: 0;
+    background: var(--Color, #F9F9F9);
+
+}
+
+.Functions-wrapper {
+    display: flex;
+    width: 784px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.Functions-title {
+    margin: 0px;
+    color: var(--text-black, #121212);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 31px;
+    /* 77.5% */
+}
+
+.Functions-description {
+    margin: 0px;
+    color: var(--text-black, #121212);
+    text-align: center;
+
+    /* MO/B/ENG/20_R */
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* 140% */
+}
+
+.Functions-image-wrapper {
+    width: 1452px;
+    height: 459.019px;
+    flex-shrink: 0;
+    aspect-ratio: 1452.00/459.02;
+    position: relative;
+}
+
+
+.feature1,
+.feature2,
+.feature3,
+.feature4 {
+    position: absolute;
+    /* 이미지 위에 위치시키기 위해 absolute 속성 추가 */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* 아이콘과 텍스트 사이 간격을 30px로 수정 */
+    padding: 6px 20px 6px 6px;
+    /* 위, 오른쪽, 아래, 왼쪽 패딩 설정 */
+    border-radius: 9999px;
+    background: rgba(0, 0, 0, 0.40);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    opacity: 0;
+    
+    transform: translateY(30px);
+    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature1.animate,
+.feature2.animate,
+.feature3.animate,
+.feature4.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.feature1 {
+    top: 145px;
+    left: 192px;
+    transition-delay: 0s;
+}
+
+.feature2 {
+    top: 145px;
+    right: 435px;
+    transition-delay: 0.2s;
+}
+
+.feature3 {
+    top: 259px;
+    left: 569px;
+    transition-delay: 0.4s;
+}
+
+.feature4 {
+    top: 259px;
+    right: 193px;
+    transition-delay: 0.6s;
+}
+
+.feature-icon1,
+.feature-icon2,
+.feature-icon3,
+.feature-icon4 {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+}
+
+.feature-text {
+    color: var(--text-white, #FFF);
+
+    /* MO/B/KR/20_Medium */
+    font-family: "Spoqa Han Sans Neo";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    margin: 0px;
+    /* 140% */
+    letter-spacing: -0.8px;
+}
