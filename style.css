@@ -258,7 +258,7 @@ ul {
 }
 
 .section-title {
-    color: var(--Color-main_hov, #4F52F8);
+    color: var(--text-black, #121212);
     text-align: center;
     font-family: "Montserrat";
     font-size: 40px;
@@ -636,12 +636,12 @@ ul {
 
     flex-shrink: 0;
     background: var(--Color, #F9F9F9);
-
+    overflow: hidden;
 }
 
 .App-wrapper {
     position: absolute;
-    top: 188px;
+    top: 150px;
     left: 215px;
     display: flex;
     width: 784px;
@@ -673,4 +673,145 @@ ul {
     font-weight: 400;
     line-height: 28px;
     letter-spacing: -0.8px;
+}
+
+.app-items-container {
+    position: absolute;
+    /* App-wrapper의 위치를 기준으로 top 위치 계산 (top 188px + App-wrapper 높이 약 107px + 간격 75px) */
+    bottom: 145px;
+    /* App-wrapper와 왼쪽 정렬을 맞춤 */
+    left: 215px;
+    right: 215px;
+    width: auto;
+    max-height: 537px;
+
+    display: flex;
+    /* 아이템들을 수평 정렬하기 위해 flex 사용 */
+    gap: 30px;
+    /* 아이템들 사이의 간격 */
+    align-items: flex-start;
+    /* 상단 정렬 */
+}
+
+.law-wrapper,
+.help-wrapper,
+.community-wrapper {
+    flex: 1;
+    /* 동일한 너비 차지 */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item {
+    aspect-ratio: 1 / 1;
+    max-width: 600px; 
+    /* 너비가 100%가 되도록 하여 wrapper 안에서 중앙 정렬 효과를 줍니다. */
+    width: 100%; 
+
+    border-radius: 15.35px;
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    /* 불필요하지만 충돌 방지를 위해 유지 */
+}
+
+.law-img {
+    width: 89.3%;
+    height: auto;
+    /* 너비에 맞춰 높이가 자동으로 조절되어 비율을 유지합니다. */
+}
+
+.help-item {
+    aspect-ratio: 1 / 1;
+    max-width: 600px; 
+    /* 너비가 100%가 되도록 하여 wrapper 안에서 중앙 정렬 효과를 줍니다. */
+    width: 100%; 
+
+    border-radius: 15.35px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;  /* 세로 방향 추가 */
+    justify-content: center;  /* 수직 중앙 정렬 */
+    align-items: center;      /* 가로 중앙 정렬 */
+    flex-shrink: 0;
+    /* 불필요하지만 충돌 방지를 위해 유지 */
+}
+
+.help-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;  /* 원형 만들기 */
+    background: #FFF;    /* 흰색 배경 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* 부드러운 그림자 */
+    padding: 9.27px;       /* 이미지와 원형 테두리 사이 여백 */
+}
+
+.help-title {
+    color: var(--text-main, #111);
+    font-family: "Spoqa Han Sans Neo";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31.235px; /* 140% */
+    letter-spacing: -0.892px;
+}
+
+.div-help-answer {
+    display: flex;
+    width: 298.962px;
+    height: 40.159px;
+    padding: 1px 7px;
+    align-items: center;
+    justify-content: center;  /* 가로 중앙 정렬 추가 */
+    gap: 11.155px;
+    flex-shrink: 0;
+    border-radius: 30px;  /* 알약 형태 */
+    background: #F5F5F5;  /* 배경색 */
+}
+
+.help-answer {
+    color: var(--text-main, #111);
+    font-family: "Spoqa Han Sans Neo";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.311px; /* 142.857% */
+    letter-spacing: -0.781px;
+}
+
+.community-img {
+    width: 100%;
+    height: auto;
+    /* 너비에 맞춰 높이가 자동으로 조절되어 비율을 유지합니다. */
+}
+
+.app-title {
+    color: var(--text-black, #121212);
+
+    /* MO/B/KR/18_Medium */
+    font-family: "Spoqa Han Sans Neo";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    /* 155.556% */
+    letter-spacing: -0.8px;
+    margin: 0px;
+}
+
+.app-description {
+    color: var(--text-sub_light, #808080);
+
+    /* MO/B/KR/16_Regular */
+    font-family: "Spoqa Han Sans Neo";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* 137.5% */
+    letter-spacing: -0.8px;
+    margin: 7.67px;
 }
